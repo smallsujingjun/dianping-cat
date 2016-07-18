@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entities do-package="com.dianping.cat.home.dal.report" gen="true">
+	<entity name="event" table="event" alias="e">
+    	<member name="creation-date" insert-expr="NOW()" />
+    	<var name="start-date" value-type="Date" />
+		<var name="end-date" value-type="Date" />
+    	<query-defs>
+			<query name="find-by-domain-time" type="SELECT" multiple="true">
+				<param name="domain" />
+				<param name="start-date" />
+				<param name="end-date" />
+				<statement><![CDATA[
+					SELECT <FIELDS/> 
+					FROM <TABLE/> 
+					WHERE <FIELD name='domain'/> = ${domain}
+					AND <FIELD name='date'/> >= ${start-date}
+					AND <FIELD name='date'/> <= ${end-date} 
+					]]></statement>
+			</query>
+		</query-defs>
+	</entity>	
+	<entity name="topology-graph" table="topologyGraph" alias="t">
+    <member name="creation-date" insert-expr="NOW()" />
+    <query-defs>
+      <query name="find-by-period" type="SELECT">
+        <param name="period" />
+        <statement><![CDATA[SELECT <FIELDS/>
+        FROM <TABLE/>
+        WHERE <FIELD name='period'/> = ${period}]]></statement>
+      </query>
+    </query-defs>
+  </entity>
+  <entity name="baseline" table="baseline" alias="b">
+    	<member name="creation-date" insert-expr="NOW()" />
+    	<var name="dataInDoubleArray" value-type="double[]" />
+    	<query-defs>
+			<query name="find-by-report-name-key-time" type="SELECT">
+				<param name="report-period" />
+				<param name="report-name" />
+				<param name="index-key" />
+				<statement><![CDATA[
+					SELECT <FIELDS/> 
+					FROM <TABLE/> 
+					WHERE <FIELD name='report-period'/> = ${report-period}
+					AND <FIELD name='report-name'/> = ${report-name}
+					AND <FIELD name='index-key'/> = ${index-key} 
+					]]></statement>
+			</query>
+		</query-defs>
+	</entity>
+</entities>
+
+
+
+
+
+
+
+
+
