@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CAT [![Build Status](https://travis-ci.org/dianping/cat.png?branch=biz)](https://travis-ci.org/dianping/cat)
 ===
 ##### CAT基于Java开发的实时应用监控平台，包括实时应用监控，业务监控。
@@ -64,3 +65,8 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 <http://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+=======
+    大众点评实时监控系统 CAT
+CAT是一个实时监控系统，它侧重于Java应用的监控，基本接入了点评所有核心应用。CAT已经在中间件框架（MVC框架、RPC框架、数据库框架、缓存框架等）中得到广泛应用，为点评各业务线提供系统的性能指标、健康状况、基础告警等。
+	CAT很大的优势是它是一个实时系统，从数据生成到服务端处理结束是毫秒级别；第二个优势，数据是接近全量统计。
+>>>>>>> eb17ac53ccb3341d45703f977c91420f5a712bf4
